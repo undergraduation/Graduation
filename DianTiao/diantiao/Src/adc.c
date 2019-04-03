@@ -44,7 +44,7 @@
 #include "dma.h"
 
 /* USER CODE BEGIN 0 */
-
+uint32_t ADC_RX[2];
 /* USER CODE END 0 */
 
 ADC_HandleTypeDef hadc1;

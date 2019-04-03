@@ -53,27 +53,6 @@
 #include "mt6813.h"
 #include "mcp4725.h"
 
-/*
-无刷电机
-  读电流-》dma float32
-  读速度-》输入捕获 int32
-  控制-》iic+io
-  堵转检测
-
-
-直流电机
-  读电流  float32
-  读位置-》iic float32
-  控制-》pwm
-  堵转检测
-  设置零位
-
-can收发 dma
-  协议
-
-串口调试 dma
-
-*/
 /* USER CODE END Includes */
 
 /* Private variables ---------------------------------------------------------*/
@@ -81,7 +60,6 @@ can收发 dma
 /* USER CODE BEGIN PV */
 
 /* Private variables ---------------------------------------------------------*/
-uint32_t ADC_RX[2];
 u8 rx[1];
 extern uint8_t CAN_RX_Flag;
 /* USER CODE END PV */
@@ -137,15 +115,15 @@ int main(void)
   /* USER CODE BEGIN 2 */
 	delay_init(72);
 	CAN_Config_Filter();
-	HAL_ADCEx_Calibration_Start(&hadc1);   	//ADC自校验
+	HAL_ADCEx_Calibration_Start(&hadc1);   	//ADC??У??
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_1);
 	HAL_TIM_PWM_Start(&htim2, TIM_CHANNEL_2);
 	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_3);
-	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);	//四路PWM
+	HAL_TIM_PWM_Start(&htim3, TIM_CHANNEL_4);	//??·PWM
 	
-	HAL_TIM_Base_Start_IT(&htim1);				//定时器中断 1ms
-	HAL_UART_Receive_IT(&huart1, rx, 1);	//串口接收中断
-	HAL_CAN_Receive_IT(&hcan,CAN_FIFO1);	//CAN接收中断
+	HAL_TIM_Base_Start_IT(&htim1);				//??????ж? 1ms
+	HAL_UART_Receive_IT(&huart1, rx, 1);	//????????ж?
+	HAL_CAN_Receive_IT(&hcan,CAN_FIFO1);	//CAN?????ж?
 	HAL_ADC_Start_DMA(&hadc1, ADC_RX, 2);
 	
 	HAL_TIM_IC_Start_IT(&htim2,TIM_CHANNEL_4);
@@ -153,14 +131,9 @@ int main(void)
 	MT6813_init();
 	MCP4725_Init();
 	delay_ms(2000);
-	TIM2->CCR1 = 0;				//		    DC_BL     ------> TIM2_CH1
-												//				DC_BH     ------> TIM2_CH2 
-	TIM2->CCR2 = 1000;
+
 	
-	TIM3->CCR3 = 2000;
-												//		    DC_AL     ------> TIM2_CH3
-												//				DC_AH     ------> TIM2_CH4 
-	TIM3->CCR4 = 0;
+
 	
 	MCP4725_WriteBreakData_Voltage(0);
 	delay_ms(1000);
