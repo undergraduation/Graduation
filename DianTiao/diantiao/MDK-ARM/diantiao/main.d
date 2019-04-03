@@ -38,6 +38,6 @@ diantiao\main.o: ../Inc/usart.h
 diantiao\main.o: ../Inc/gpio.h
 diantiao\main.o: ..\System\delay\delay.h
 diantiao\main.o: ..\System\sys\sys.h
-diantiao\main.o: ..\Control\Inc\control_can.h
-diantiao\main.o: ..\Control\Inc\mt6813.h
-diantiao\main.o: ..\Control\Inc\mcp4725.h
+diantiao\main.o: ..\Driver\Inc\control_can.h
+diantiao\main.o: ..\Driver\Inc\mt6813.h
+diantiao\main.o: ..\Driver\Inc\mcp4725.h

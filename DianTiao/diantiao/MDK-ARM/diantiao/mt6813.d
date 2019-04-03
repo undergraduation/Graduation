@@ -1,5 +1,5 @@
-diantiao\mt6813.o: ..\Control\Src\MT6813.c
-diantiao\mt6813.o: ..\Control\Inc\mt6813.h
+diantiao\mt6813.o: ..\Driver\Src\MT6813.c
+diantiao\mt6813.o: ..\Driver\Inc\mt6813.h
 diantiao\mt6813.o: ..\System\sys\sys.h
 diantiao\mt6813.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diantiao\mt6813.o: ../Inc/stm32f1xx_hal_conf.h
@@ -32,5 +32,5 @@ diantiao\mt6813.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_pwr.h
 diantiao\mt6813.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diantiao\mt6813.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 diantiao\mt6813.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
-diantiao\mt6813.o: ..\Control\Inc\myi2c.h
+diantiao\mt6813.o: ..\Driver\Inc\myi2c.h
 diantiao\mt6813.o: ..\System\delay\delay.h

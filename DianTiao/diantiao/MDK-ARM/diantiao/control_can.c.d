@@ -1,5 +1,5 @@
-diantiao\control_can.c.o: ..\Control\Src\control_can.c.c
-diantiao\control_can.c.o: ..\Control\Inc\control_can.h
+diantiao\control_can.c.o: ..\Driver\Src\control_can.c.c
+diantiao\control_can.c.o: ..\Driver\Inc\control_can.h
 diantiao\control_can.c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diantiao\control_can.c.o: ../Inc/stm32f1xx_hal_conf.h
 diantiao\control_can.c.o: ../Inc/main.h

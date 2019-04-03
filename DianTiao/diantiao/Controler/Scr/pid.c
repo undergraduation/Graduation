@@ -37,7 +37,7 @@ float set_ref(PID_Regulator_t *pid, float ref)
 	return temp;
 }
 
-float get_ref(PID_Regulator_t *pid);
+float get_ref(PID_Regulator_t *pid)
 {
 	return pid->ref;
 }

@@ -1,5 +1,5 @@
-diantiao\pid.o: ..\Control\Src\pid.c
-diantiao\pid.o: ..\Control\Inc\pid.h
+diantiao\pid.o: ..\Controler\Scr\pid.c
+diantiao\pid.o: ..\Controler\Inc\pid.h
 diantiao\pid.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diantiao\pid.o: ../Inc/stm32f1xx_hal_conf.h
 diantiao\pid.o: ../Inc/main.h

@@ -53,18 +53,4 @@ void MCP4725_WriteVelData_Voltage(u16 Vout)   //µÁ—πµ•ŒªmV
 //	delay_ms(10);	
 }
 
-void MCP4725_ReadData(void)
-{
-	u16 buf[6];
-	IIC_Start();
-	
-	IIC_Send_Byte(0xC0|1);
-	IIC_Wait_Ack();
-  
-	for(int i=0; i< 5;i++)
-	{
-		buf[i]=IIC_Read_Byte(1);
-	}
-	IIC_Stop();
-	
-}
+

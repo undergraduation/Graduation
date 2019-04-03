@@ -1,5 +1,5 @@
-diantiao\myiic.o: ..\Control\Src\myiic.c
-diantiao\myiic.o: ..\Control\Inc\myiic.h
+diantiao\myiic.o: ..\Driver\Src\myiic.c
+diantiao\myiic.o: ..\Driver\Inc\myiic.h
 diantiao\myiic.o: ..\System\sys\sys.h
 diantiao\myiic.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diantiao\myiic.o: ../Inc/stm32f1xx_hal_conf.h

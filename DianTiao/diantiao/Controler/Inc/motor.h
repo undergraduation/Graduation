@@ -21,7 +21,7 @@ float motor_set_zero_position(MOTOR * motor, float zero_position);
 void motor_check_blocking(MOTOR * motor);
 uint8_t motor_is_blocked(MOTOR * motor);
 
-void motor_output(MOTOR * motor);
+void motor_output(MOTOR *motor, float speed);
 
 #endif
 

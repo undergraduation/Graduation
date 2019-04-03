@@ -1,5 +1,5 @@
-diantiao\myi2c.o: ..\Control\Src\myi2c.c
-diantiao\myi2c.o: ..\Control\Inc\myi2c.h
+diantiao\myi2c.o: ..\Driver\Src\myi2c.c
+diantiao\myi2c.o: ..\Driver\Inc\myi2c.h
 diantiao\myi2c.o: ..\System\sys\sys.h
 diantiao\myi2c.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diantiao\myi2c.o: ../Inc/stm32f1xx_hal_conf.h

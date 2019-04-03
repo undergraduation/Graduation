@@ -1,5 +1,5 @@
-diantiao\mcp4725.o: ..\Control\Src\mcp4725.c
-diantiao\mcp4725.o: ..\Control\Inc\mcp4725.h
+diantiao\mcp4725.o: ..\Driver\Src\mcp4725.c
+diantiao\mcp4725.o: ..\Driver\Inc\mcp4725.h
 diantiao\mcp4725.o: ..\System\sys\sys.h
 diantiao\mcp4725.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal.h
 diantiao\mcp4725.o: ../Inc/stm32f1xx_hal_conf.h
@@ -33,4 +33,4 @@ diantiao\mcp4725.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim.h
 diantiao\mcp4725.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_tim_ex.h
 diantiao\mcp4725.o: ../Drivers/STM32F1xx_HAL_Driver/Inc/stm32f1xx_hal_uart.h
 diantiao\mcp4725.o: ..\System\delay\delay.h
-diantiao\mcp4725.o: ..\Control\Inc\myiic.h
+diantiao\mcp4725.o: ..\Driver\Inc\myiic.h

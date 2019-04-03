@@ -2,6 +2,7 @@
 #include "mt6813.h"
 #include "mcp4725.h"
 #include "adc.h"
+#include "tim.h"
 struct MOTOR
 {
     float current;       //电流读数
@@ -26,7 +27,7 @@ float motor_read_speed(MOTOR *motor)
         break;
     case STEERING_MOTOR:
         break;
-        default：break;
+		default:break;
     }
     return motor->speed;
 }
@@ -48,7 +49,7 @@ float motor_read_current(MOTOR *motor)
     case STEERING_MOTOR:
         motor->current = ADC_RX[1] * 3.3 / 4096;
         break;
-        default：break;
+		default:break;
     }
     return motor->current;
 }
@@ -65,12 +66,11 @@ float motor_read_position(MOTOR *motor)
     case STEERING_MOTOR:
         motor->position = MT6813_Get_Angle();
         break;
-        default：break;
     case LIFTING_MOTOR:
         break;
     case DRIVING_MOTOR:
         break;
-        default：break;
+		default:break;
     }
     return motor->position;
 }
@@ -102,7 +102,6 @@ uint8_t motor_is_blocked(MOTOR *motor)
 
 void motor_output(MOTOR *motor, float speed)
 {
-    ass
     switch (motor->id)
     {
     case DRIVING_MOTOR:
